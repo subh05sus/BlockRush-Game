@@ -20,14 +20,14 @@
 ### Prerequisites
 
 - [Unity Hub](https://unity.com/download) installed on your machine.
-- [Unity Editor](https://unity.com/download) installed. [Version X.X recommended]
+- [Unity Editor](https://unity.com/download) installed. 
 
 ### Installation
 
-1. Clone the repository: `git clone https://github.com/yourusername/DodgeDash.git`
+1. Clone the repository: `git clone https://github.com/subh05sus/BlockRush-Game.git`
 2. Open Unity Hub.
 3. Click on the "Add" button in Unity Hub.
-4. Navigate to the project directory (`DodgeDash`) that you cloned in step 1.
+4. Navigate to the project directory (`BlockRush-Game`) that you cloned in step 1.
 5. Select the folder and click "Open."
 
 ### Opening the Project in Unity Editor
@@ -43,7 +43,7 @@ We welcome contributions from the community! If you'd like to contribute to "Blo
 
 ## Issues
 
-If you encounter any issues or have suggestions for improvement, please open an issue on the [Issues](https://github.com/subh05sus/BlockRush/issues) page.
+If you encounter any issues or have suggestions for improvement, please open an issue on the [Issues](https://github.com/subh05sus/BlockRush-Game/issues) page.
 
 ## License
 
