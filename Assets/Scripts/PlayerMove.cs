@@ -9,47 +9,37 @@ public class PlayerMove : MonoBehaviour
     public float IncreaseSpeedByTime = 0.001f;
     public float maxSpeed = 40f;
     public static float gameScoreFall;
-    public Transform trans;
-    public bool moveLeft=false;
-    public bool moveRight=false;
     private float screenCenterX;
 
     
     void Start()
     {
-        // Get the x-coordinate of the center of the screen
-    
         screenCenterX = Screen.width / 2f;
     }
 
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (moveSpeed<maxSpeed)
         {
             moveSpeed += Time.deltaTime*IncreaseSpeedByTime;
         }
-        //added forward force
-        // rb.AddForce(0,0,forwardForce * Time.deltaTime);
+
         rb.velocity = moveSpeed*transform.forward;
-        // adding side movements
-        if (Input.GetKey("a"))
-        {
-            movingLeft ();
-        }
-        if (Input.GetKey("d"))
-        {
-            movingRight ();
-        }
+
+        Move();
 
         if (rb.position.y <= 0)
         {
             FindObjectOfType<GameManager>().EndGame();
         }
+    }
 
+    private void Move()
+    {
+        float horizontal = Input.GetAxis("Horizontal");
 
-        // Check if the left or right side of the screen is being held
+        rb.AddForce(SideForce * Time.deltaTime * horizontal, 0 ,0, ForceMode.VelocityChange);
+
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -64,22 +54,17 @@ public class PlayerMove : MonoBehaviour
                 movingRight();
             }
         }
-
-
-
-
-
     }
 
-    public void movingLeft () {
+    public void movingLeft () 
+    {
+        
         rb.AddForce(-SideForce*Time.deltaTime,0,0, ForceMode.VelocityChange);
             
     }
-    public void movingRight () {
+    public void movingRight () 
+    {
         rb.AddForce(SideForce*Time.deltaTime,0,0, ForceMode.VelocityChange);
             
     }
-
-
-
 }
