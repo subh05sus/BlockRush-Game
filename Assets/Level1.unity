@@ -615,7 +615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 815901423}
   forwardForce: 100
-  SideForce: 240
+  SideForce: 400
   moveSpeed: 12
   IncreaseSpeedByTime: 1
   maxSpeed: 40
