@@ -1,0 +1,22 @@
+name: MyCodeQLAnalysis
+
+
+language: javascript
+
+
+sources:
+  - path: /path/to/source/code
+
+
+libraries:
+  - /path/to/codeql-javascript-repo/javascript/standard-library
+
+
+queries:
+  - path: /path/to/custom/queries
+
+
+runs:
+  - name: InitialAnalysis
+    queries: 
+      - MyJavaScriptQuery.ql
