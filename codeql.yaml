@@ -1,22 +1,22 @@
-name: MyCodeQLAnalysis
+name: UnityCodeQLAnalysis
 
+# Specify the language being analyzed (C# for Unity)
+language: csharp
 
-language: javascript
-
-
+# List the source locations of the Unity project
 sources:
-  - path: /path/to/source/code
+  - path: /path/to/unity/project
 
-
+# Specify the database for the Unity CodeQL standard library
 libraries:
-  - /path/to/codeql-javascript-repo/javascript/standard-library
+  - /path/to/codeql-csharp-repo/csharp/unity
 
-
+# Specify additional queries or queries folder
 queries:
   - path: /path/to/custom/queries
 
-
+# Specify the analysis suite or queries to run
 runs:
-  - name: InitialAnalysis
+  - name: UnityAnalysis
     queries: 
-      - MyJavaScriptQuery.ql
+      - UnitySpecificQuery.ql
